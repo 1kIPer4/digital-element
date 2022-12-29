@@ -1,0 +1,173 @@
+.lock {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px 10px;
+  background-color: hsla(0, 0%, 0%, .5);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all .5s ease;
+
+  &__wrapper {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__body {
+    position: relative;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 5px 10px 50px hsla(204deg, 83%, 38%, 0.2);
+    transition: all .7s ease;
+  }
+
+  &__content {
+    opacity: 0;
+    transition: opacity .1s ease;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    margin-bottom: 72px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    width: 100%;
+    height: 72px;
+    box-shadow: 5px 20px 50px hsl(204deg, 83%, 38%, 0.2);
+    font-weight: 600;
+    transition: all .5s ease;
+
+    &:hover {
+      background-color: hsl(208deg, 70%, 53%);
+      box-shadow: 0 10px 30px hsla(212deg, 81%, 50%, .4);
+    }
+  }
+
+  .close {
+    top: 58px;
+    right: 56px;
+  }
+}
+
+.modal-open {
+  opacity: 1;
+  visibility: visible;
+
+  .modal__body {
+    width: 540px;
+    height: 800px;
+    padding: 56px;
+  }
+
+  .modal__content {
+    opacity: 1;
+    transition: opacity .3s ease .6s;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__label {
+    margin-bottom: 8px;
+  }
+
+  &__input {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    padding: 21px 42px;
+    border-radius: 10px;
+    border: 1px solid hsla(211deg, 53%, 44%, .4);
+    color: var(--clr-primary-100);
+    font-weight: 300;
+    width: 100%;
+    height: 72px;
+    transition: border .3s ease;
+
+    &::placeholder {
+      text-transform: capitalize;
+      color: var(--clr-primary-placeholder);
+    }
+
+    &:focus {
+      border: 1px solid var(--clr-primary-300);
+    }
+  }
+
+  textarea.field__input {
+    height: 144px;
+  }
+}
+
+.field-error {
+  .field__input {
+    border: 1px solid var(--clr-primary-error);
+
+    &::placeholder {
+      color: var(--clr-primary-error);
+    }
+  }
+}
+
+//---------------------- Адаптив [768 - 1023] ----------------------
+@media screen and (max-width: 1023px) {
+  .modal .close {
+    transition: var(--transition-media);
+  }
+}
+
+//---------------------- Адаптив [425 - 767] ----------------------
+@media screen and (max-width: 569px) {
+  .modal .close {
+    top: 38px;
+    right: 36px;
+  }
+  .modal-open .modal__body {
+    padding: 36px;
+    width: 448px;
+    height: 760px;
+  }
+}
+
+//---------------------- Адаптив [360 - 424] ----------------------
+@media screen and (max-width: 424px) {
+  .modal {
+    padding: 30px 0;
+
+    .close {
+      top: 32px;
+      right: 30px;
+    }
+  }
+  .modal-open .modal__body {
+    padding: 30px;
+    width: 436px;
+    height: 748px;
+  }
+}

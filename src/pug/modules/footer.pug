@@ -1,0 +1,47 @@
+-
+    let contacts = [
+        {number: 'A.', value: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
+        {number: 'T.', value: '+62-812-7313-4321'},
+        {number: 'E.', value: 'hello.afrian@gmail.com'}
+    ],
+    footerList = [
+        {title: 'about', value: ['About US', 'About', 'What we do', 'Project', 'How it work with us']},
+        {title: 'follow', value: ['Follow US', 'Instagram', 'Facebook', 'Linkedln', 'Youtube']}
+    ]
+
+footer.footer
+    .container
+        .footer__offer
+            .footer__text-wrapper
+                h2.footer__title Intersted to work with our team?
+                p.footer__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            a(href='#send-message' class='btn footer__btn modal-link') Let’s Talk
+    hr.footer__hr
+    div(class='container footer__container')
+        .footer__contact#footer
+            ul(class='contact__list list')
+                li(class='list__item list__header')
+                    a(class='logo anchor' href='#main')
+                        img.logo__img(src=require('@img/logo.svg'))
+                    span.list__title Afrianska
+                each info, index in contacts
+                    li.list__item
+                        span.list__number= info.number
+                        case index
+                            when 1
+                                a.list__link(href='tel:#{info.value}')
+                                    p.list__text= info.value
+                            when 2
+                                a.list__link(href='mailto:#{info.value}')
+                                    p.list__text= info.value
+                            default
+                                p.list__text= info.value
+            each list in footerList
+                ul(class=`${list.title}__list list`)
+                    each info, index in list.value
+                        if (index == 0)
+                            li(class='list__item list__header')= info
+                        else
+                            li.list__item
+                                a(class='list__link anchor' href='#footer')= info
+        span.footer__copywriting 2019 © Afrianska. All rights reserved.

@@ -1,0 +1,10 @@
+div.paper
+    .paper__container
+        .paper__head
+            span.paper__badge G
+            span.paper__line-bold
+        - for  (let i = 0; i < 4; i++)
+            .paper__row
+                span(class='paper__line paper__line-active')
+                - for (let j = 0; j < 3; j++)
+                    span.paper__line

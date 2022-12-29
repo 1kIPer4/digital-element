@@ -1,0 +1,319 @@
+@media screen and (max-width: 1599px) {
+  .illustration {
+    left: auto;
+    right: 23px;
+  }
+}
+
+//---------------------- Адаптив [1024 - 1439] ----------------------
+@media screen and (max-width: 1439px) {
+  .container {
+    max-width: 940px;
+  }
+  .main__container {
+    max-width: 1284px;
+    padding: 0 42px;
+  }
+  .main {
+    transition: var(--transition-media);
+  }
+  .offer {
+    left: 42px;
+  }
+  .illustration {
+    left: auto;
+    right: 0;
+
+    .icon-colored__wrapper {
+      top: -18px;
+      height: 124px;
+    }
+  }
+  .services {
+    transition: var(--transition-media);
+
+    &__container {
+      transition: none;
+    }
+  }
+  .clients__text-wrapper {
+    margin-left: 80px;
+  }
+}
+@media screen and (max-width: 1129px) {
+  .illustration {
+    top: 27%;
+
+    .women {
+      bottom: 290px;
+    }
+
+    .icon-colored__wrapper {
+      position: absolute;
+      top: -66px;
+    }
+  }
+}
+@media screen and (max-width: 1089px) {
+  .illustration {
+    top: 27%;
+    right: auto;
+    left: 403px;
+  }
+}
+
+//---------------------- Адаптив [768 - 1023] ----------------------
+@media screen and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 42px;
+    transition: none;
+  }
+  .main {
+    height: 1100px;
+  }
+  .offer {
+    top: 188px;
+
+    &__title,
+    &__text {
+      transition: var(--transition-media);
+    }
+  }
+  .illustration {
+    top: 520px;
+    left: auto;
+    right: 20px;
+  }
+  .services {
+    padding: 150px 0;
+
+    &__container {
+      max-width: 548px;
+    }
+
+    &__title {
+      position: relative;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  .cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .card {
+    margin-top: 100px;
+
+    &:first-child {
+      margin-right: 0;
+      transform: translateY(0);
+    }
+  }
+  .clients {
+    padding-bottom: 100px;
+
+    &__container {
+      max-width: 470px;
+      padding: 0;
+    }
+
+    &__text-wrapper {
+      flex-direction: column;
+      margin: 0 0 80px 0;
+      width: 100%;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &__item {
+      &:nth-child(n) {
+        border: none;
+      }
+
+      &:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, .4);
+      }
+
+      &:not(:nth-child(7)):not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, .4);
+      }
+    }
+  }
+}
+
+//---------------------- Адаптив [425 - 767] ----------------------
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 704px;
+    padding: 0 10px;
+  }
+  .offer {
+    max-width: 405px;
+    top: 138px;
+    left: auto;
+
+    &__title {
+      font-size: 44px;
+      line-height: 62px;
+    }
+
+    &__text {
+      letter-spacing: .02em;
+      margin-bottom: 50px;
+    }
+  }
+  .illustration {
+    right: 50%;
+    transform: translateX(50%);
+
+    .man,
+    .platform {
+      transition: var(--transition-media);
+    }
+  }
+  .services {
+    padding-top: 100px;
+
+    &__container {
+      max-width: 480px;
+    }
+  }
+  .card {
+    transition: var(--transition-media);
+  }
+  .clients {
+    &__container {
+      max-width: 490px;
+    }
+    &__title {
+      transition: margin-bottom .5s ease;
+    }
+    &__list {
+      transition: var(--transition-media);
+    }
+  }
+}
+//illustration
+@media screen and (max-width: 579px) {
+  .main {
+    height: 1140px;
+  }
+  .illustration {
+    top: 540px;
+    right: 55%;
+
+    .man {
+      bottom: 60px;
+      left: 150px;
+    }
+
+    .platform {
+      top: 262px;
+      left: 243px;
+    }
+
+    .women {
+      bottom: 260px;
+      right: 32px;
+    }
+
+    .icon-colored__wrapper {
+      right: 100px;
+      top: -38px;
+    }
+  }
+  .footer__offer {
+
+  }
+}
+//clients
+@media screen and (max-width: 489px) {
+  .clients {
+
+    &__title {
+      text-align: right;
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      max-width: 338px;
+    }
+
+    &__text-wrapper {
+      margin: 0 0 60px 0;
+      align-items: flex-end;
+      padding-right: 20px;
+    }
+
+    &__list {
+      max-width: 235px;
+    }
+
+    &__item:nth-child(n) {
+      border-right: none;
+    }
+
+    &__item:nth-child(7) {
+      border-bottom: 1px solid rgba(255, 255, 255, .4);
+    }
+  }
+}
+
+//---------------------- Адаптив [360 - 424] ----------------------
+@media screen and (max-width: 424px) {
+  .main {
+    height: 1200px;
+  }
+  .offer__text {
+    margin-bottom: 30px;
+  }
+  .illustration {
+    top: 600px;
+
+    .man {
+      bottom: 50px;
+      left: 178px;
+    }
+
+    .platform {
+      top: 272px;
+      left: 271px;
+    }
+
+    .women {
+      bottom: 230px;
+      right: 70px;
+    }
+
+    .icon-colored__wrapper {
+      top: -08px;
+      right: 138px;
+    }
+  }
+  .card {
+    width: 100%;
+    padding: 48px 28px;
+  }
+  .clients {
+    &__text-wrapper {
+      padding-right: 0;
+      margin: 0 0 40px 0;
+    }
+
+    &__text {
+      max-width: 300px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 36px;
+      margin-right: 0;
+    }
+  }
+}

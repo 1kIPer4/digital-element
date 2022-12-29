@@ -1,0 +1,15 @@
+$colors: (
+  primary: (
+    500: hsl(208deg, 63%, 75%),
+    400: hsl(208deg, 56%, 58%),
+    300: hsl(211deg, 53%, 44%),
+    200: hsl(213deg, 51%, 40%),
+    100: hsl(214deg, 54%, 26%),
+    placeholder: hsla(214deg, 54%, 26%, .2),
+    error: hsl(0, 100%, 50%)
+  ),
+  gradient: (
+    main: hsla(208deg, 63%, 75%, .2),
+    person: hsla(207deg, 89%, 68%, .6),
+  )
+);

@@ -1,0 +1,41 @@
+-
+    let modalInfo = [
+        {
+            id: 'name',
+            label: 'Full name',
+            type: 'text',
+            placeholder: 'Your name',
+        },
+        {
+            id: 'email',
+            label: 'Email',
+            type: 'email',
+            placeholder: 'Your email'
+        },
+        {
+            id: 'message',
+            label: 'Message',
+            type: 'textarea',
+            placeholder: 'Your message'
+        }
+    ]
+
+.modal#send-message
+    .modal__wrapper
+        .modal__body
+            form.modal__content(action='#')
+                button(class='modal__close close close-modal')
+                    span.close__line
+                    span.close__line
+                h4.modal__title Send us message
+                ul.modal__list
+                    each info in modalInfo
+                        li(class='modal__item field')
+                            label.field__label(for=info.id)= info.label
+                            if (info.type == 'textarea')
+                                textarea.field__input(placeholder=info.placeholder id=info.id)
+                            else
+                                input.field__input(type=info.type placeholder=info.placeholder id=info.id)
+                button(class='btn modal__btn' type='submit') Submit
+
+include ../components/loading

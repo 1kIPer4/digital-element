@@ -1,0 +1,23 @@
+-
+    let menu = [
+        {title: 'Home', anchor: 'main'},
+        {title: 'Service', anchor: 'services'},
+        {title: 'Clients', anchor: 'clients'},
+        {title: 'Contact', anchor: 'footer'},
+    ]
+
+include ../components/float-chip
+header#header(class='header lock-padding')
+    div(class='container header__container')
+        a(class='logo anchor' href='#main')
+            img.logo__img(src=require('@img/logo.svg'))
+        nav.menu
+            .menu__wrapper
+                ul.menu__list
+                    each item in menu
+                        li.menu__item
+                            a.anchor(href=`#${item.anchor}`)= item.title
+            .burger
+                span.burger__line
+                span.burger__line
+                span.burger__line

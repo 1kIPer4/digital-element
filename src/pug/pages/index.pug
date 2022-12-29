@@ -1,0 +1,78 @@
+extends ../layout/home
+
+block variables
+    -
+        let cardsInfo = [
+            {
+                img: 'person1',
+                title: 'New Automation Tool for Your Home',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                link: '#services'
+            },
+            {
+                img: 'person2',
+                title: 'Bring Technology To Your Comfrotable Home',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                link: '#services'
+            },
+            {
+                img: 'person3',
+                title: 'Build Your Digital Product That Suitable For Your Need',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                link: '#services'
+            }
+        ]
+
+block content
+    section.main#main
+        div(class='container main__container')
+            .offer
+                h1.offer__title.New Automation Tool for Your Home
+                p.offer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.
+                button(class ='btn offer__btn') See Our Project
+        .illustration
+            img(src=require('@img/bean-back.svg') class='illustration__img bean-back')
+            img(src=require('@img/bean-front.svg') class='illustration__img bean-front')
+            img(src=require('@img/texture.svg') class='illustration__img texture')
+            img(src=require('@img/women.svg') class='illustration__img women')
+            .icon-colored__wrapper
+                        include ../components/icon-colored
+            img(src=require('@img/man.svg') class='illustration__img man')
+            img(src=require('@img/platform.svg') class='illustration__img platform')
+
+    section.services#services
+        div(class='container services__container')
+            h2.services__title.
+                What we do to help our client grow in digital era,
+            ul.cards
+                each card, index in cardsInfo
+                    li.card
+                        .card__image
+                            img(src=require(`@img/${card.img}.svg`) class=`card__icon ${card.img}`)
+                            case index
+                                when 0
+                                    include ../components/paper
+                                when 1
+                                    include ../components/icon-colored
+                                when 2
+                                    include ../components/laptop
+                        h3.card__title= card.title
+                        p.card__text= card.text
+                        a(class='card__link anchor' href= card.link)
+                            span.link__text Learn more
+                            img(src=require('@img/learn-more-arrow.svg'))
+
+    .bg-footer
+        section.clients#clients
+            div(class='container clients__container')
+                .clients__text-wrapper
+                    h2.clients__title Our Beloved Client
+                    p.clients__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                ul.clients__list
+                    - for (let i = 1; i <= 8; i++)
+                        if (i == 8)
+                            li(class='clients__item clients__item-active') More Client
+                        else
+                            li.clients__item Logo client #{i}
+
+        include ../modules/footer

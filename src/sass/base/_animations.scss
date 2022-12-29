@@ -1,0 +1,112 @@
+@keyframes move-light {
+  from {
+    transform: translate(-3em) skewX(-45deg);
+  }
+  to {
+    transform: translate(18em) skewX(-45deg);
+  }
+}
+
+@keyframes paper-head {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes paper-lines1 {
+  10% {
+    opacity: 1;
+    width: 0;
+  }
+  30% {
+    width: 100%;
+  }
+  90% {
+    opacity: 1;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+@keyframes paper-lines2 {
+  30% {
+    opacity: 1;
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+@keyframes paper-lines3 {
+  50% {
+    opacity: 1;
+    width: 0;
+  }
+  70% {
+    width: 100%;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+@keyframes paper-lines4 {
+  70% {
+    opacity: 1;
+    width: 0;
+  }
+  90% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+@keyframes move-light-laptop {
+  0% {
+    transform: translate(-3em) skewX(-45deg);
+  }
+  65% {
+    transform: translate(-3em) skewX(-45deg);
+  }
+  80% {
+    transform: translate(5em) skewX(-45deg);
+  }
+  100% {
+    transform: translate(5em) skewX(-45deg);
+  }
+}
+
+@keyframes loading {
+  from {}
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,52 @@
+//---------------------- Адаптив [1024 - 1439] ----------------------
+@media screen and (max-width: 1439px) {
+  .header__container {
+    max-width: 1284px;
+    padding: 0 42px;
+  }
+  .menu.menu-open .menu__list {
+    margin-right: 100px;
+  }
+}
+
+//---------------------- Адаптив [768 - 1023] ----------------------
+@media screen and (max-width: 1023px) {
+  .menu.menu-open .menu__list {
+    margin-right: 40px;
+  }
+}
+
+//---------------------- Адаптив [425 - 767] ----------------------
+@media screen and (max-width: 767px) {
+  .header__container {
+      z-index: auto;
+  }
+  .menu {
+    height: 32px;
+
+    &__list {
+      position: fixed;
+      height: 100vh;
+      width: 274px;
+      flex-direction: column;
+      top: 0;
+      right: -274px;
+      margin: 0;
+      padding: 120px 40px 40px 40px;
+      background-color: hsla(0deg, 0%, 100%, .95);
+      box-shadow: 0px 0px 10px hsla(213deg, 51%, 40%, 0.05);
+      z-index: 10;
+      transition: top .5s ease, height .5s ease, width .5s ease, right .5s ease, opacity .5s ease 0s, visibility .5s ease 0s;
+    }
+
+    &__item {
+      width: fit-content;
+      margin: 15px 0;
+    }
+
+    &.menu-open .menu__list {
+      right: -42px;
+      margin-right: 0;
+    }
+  }
+}

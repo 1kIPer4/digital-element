@@ -1,0 +1,148 @@
+.footer {
+  color: #fff;
+  margin-right: 96px;
+  border-radius: 0 200px 0 0;
+  background-color: var(--clr-primary-200);
+  transition: var(--transition-media);
+
+  &__offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 860px;
+    padding: 90px 0;
+    margin-left: 130px;
+    transition: var(--transition-media);
+  }
+
+  &__text-wrapper {
+    max-width: 460px;
+  }
+
+  &__title {
+    max-width: 320px;
+    color: #fff;
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    position: relative;
+    overflow: hidden;
+    transition: margin .5s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1em;
+      height: 100%;
+      background-color: #fff;
+      opacity: 0.8;
+      transform: translateX(-3em) skewX(-45deg);
+    }
+
+    &:hover::before {
+      animation: move-light .7s;
+    }
+  }
+
+  &__hr {
+    opacity: .4;
+    width: calc(100% - 293px);
+    transition: var(--transition-media);
+  }
+
+  .logo::before {
+    background-color: var(--clr-primary-500);
+  }
+
+  .list__text {
+    opacity: 1;
+  }
+
+  &__container {
+    padding-left: 130px;
+    transition: var(--transition-media);
+  }
+
+  &__contact {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  &__copywriting {
+    margin-top: 65px;
+    padding-bottom: 65px;
+    color: hsla(0, 0%, 100%, .4);
+  }
+
+  .list {
+    text-transform: capitalize;
+  }
+}
+
+.list {
+  &__item {
+    margin-bottom: 16px;
+    width: fit-content;
+  }
+
+  &__header {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 7px;
+    font-weight: 600;
+  }
+
+  &__link {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      margin-top: 3px;
+      width: 0;
+      height: 1px;
+      background-color: hsla(0, 0%, 100%, .8);
+      transition: width .4s ease;
+    }
+
+    &:hover::after {
+      width: 105%;
+    }
+  }
+}
+
+.about__list {
+  margin-right: 150px;
+}
+
+.contact__list {
+  margin-right: 180px;
+
+  .list__header {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .list__title {
+    margin-left: 15px;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.02em;
+  }
+
+  .list__item {
+    display: flex;
+    max-width: 260px;
+    margin-bottom: 24px;
+  }
+
+  .list__number {
+    font-weight: 600;
+    margin-right: 16px;
+  }
+}

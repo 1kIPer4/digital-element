@@ -1,0 +1,60 @@
+@use '../abstracts';
+
+//Шрифты
+@each $font, $weight in abstracts.$fonts {
+  @include abstracts.font-face($font, $weight);
+}
+
+//Цвета
+:root {
+  @each $color, $shade in abstracts.$colors {
+    @each $prop, $value in $shade {
+      --clr-#{$color}-#{$prop}: #{$value};
+    }
+  }
+  --transition-media: all .5s ease;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  background: #fff;
+  color: var(--clr-primary-100);
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 46px;
+  color: var(--clr-primary-200);
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04px;
+}
+
+p {
+  opacity: .6;
+}
+
+span {
+  display: block;
+}
